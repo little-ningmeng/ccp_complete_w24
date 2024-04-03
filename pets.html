@@ -46,7 +46,7 @@
 
     <main id="main">
         <div class="col-3 menu">
-            <p class="menuitem" data-menu-foldable=true>Menu</p>
+            <p class="menuitem" tabindex="0" data-menu-foldable=true>Menu</p>
             <ul class="submenu">
                 <li><a href="#bacon">Bacon Q Dog</a></li>
                 <li><a href="#fitz">Fitz</a></li>
@@ -127,49 +127,6 @@
             </div>
         </div>
     </main>
-    <script>
-        var x = window.matchMedia("(max-width: 1000px)");
-        function myFunction(x) {
-            if (x.matches) {
-                document.addEventListener('DOMContentLoaded', function(){
-                    var item = document.querySelector('.menuitem');
-                    if (item === null) {
-                        return;
-                    }
-                    item.addEventListener('click', function(e){
-                        var submenu;
-                        this.classList.toggle('arrow-fold-out');
-                        submenu = this.parentElement.querySelector('.submenu');
-                        if (this.classList.contains('arrow-fold-out')) {
-                            submenu.style.display = 'block';
-                        } else {
-                            submenu.style.display = 'none';
-                        }
-                    });
-                });
-            } else {
-                document.addEventListener('DOMContentLoaded', function(){
-                    var item = document.querySelector('.menuitem');
-                    if (item === null) {
-                        return;
-                    }
-                    item.addEventListener('click', function(e){
-                        var submenu;
-                        this.classList.toggle('arrow-fold-out');
-                        submenu = this.parentElement.querySelector('.submenu');
-                        if (this.classList.contains('arrow-fold-out')) {
-                            submenu.style.display = 'none';
-                        } else {
-                            submenu.style.display = 'block';
-                        }
-                    });
-                });
-            }
-        }
-        myFunction(x);
-        x.addEventListener("change", function() {
-            myFunction(x);
-        });
-    </script>
+    <script src="js/ccpcompletejs1.js"></script>
 </body>
 </html>

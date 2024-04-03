@@ -273,7 +273,7 @@ li {
 }
 
 /* menu */
-.menu p {
+.menu p { /* div */
     font-size: 16px;
     line-height: 1;
     text-align: center;
